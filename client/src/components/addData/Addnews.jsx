@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import axios from "axios";
+import ScrollToTopOnMount from "../partials/ScrolltoTop";
 
 function Addnews() {
   const [ispopup, setpopup] = useState(false);
@@ -36,6 +37,7 @@ function Addnews() {
 
   return (
     <div id="news">
+      <ScrollToTopOnMount />
       <div
         className={`alert ${ispopup ? "show-alert" : "hide-alert"}`}
         onTransitionEnd={() => setpopup(false)}

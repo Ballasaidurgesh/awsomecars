@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import ScrollToTopOnMount from "../partials/ScrolltoTop";
 
 function Addcar() {
   const [ispopup, setpopup] = useState(false);
@@ -85,6 +86,7 @@ function Addcar() {
 
   return (
     <div className="post-cars">
+      <ScrollToTopOnMount />
       <h1>Add New Car</h1>
 
       <div

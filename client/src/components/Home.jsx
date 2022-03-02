@@ -7,7 +7,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/news")
+      .get("/news")
       .then((response) => {
         setNews(response.data);
       })

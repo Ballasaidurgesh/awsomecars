@@ -11,7 +11,7 @@ function Model() {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/model/${id}`).then((response) => {
+    axios.get(`/model/${id}`).then((response) => {
       setitems(response.data);
     });
   });

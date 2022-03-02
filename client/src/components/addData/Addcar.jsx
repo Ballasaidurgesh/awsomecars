@@ -70,7 +70,7 @@ function Addcar() {
     setinput(input);
     setpopup(true);
     axios
-      .post("http://localhost:8000/addcar", input)
+      .post("/addcar", input)
       .then(() => {
         console.log("data is sent to server");
       })

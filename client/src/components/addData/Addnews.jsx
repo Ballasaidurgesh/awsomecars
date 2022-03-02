@@ -23,7 +23,7 @@ function Addnews() {
 
   function handleClick(event) {
     event.preventDefault();
-    axios.post("http://localhost:8000/addnews", input);
+    axios.post("/addnews", input);
 
     setInput({
       image: "",

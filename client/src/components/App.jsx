@@ -8,7 +8,6 @@ import Cars from "./Cars";
 import Home from "./Home";
 import Addnews from "./addData/Addnews";
 import Login from "./Login";
-import Signup from "./Signup";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import Admin from "./Admin";
 import ProtectedRoute from "./ProtectedRoute";
@@ -23,7 +22,7 @@ function App() {
           <Route path="/model/:id" element={<Model />} />
           <Route path="/cars/:brand" element={<Cars />} />
           <Route path="login" element={<Login />} />
-          <Route path="signup" element={<Signup />} />
+
           <Route
             path="admin"
             element={

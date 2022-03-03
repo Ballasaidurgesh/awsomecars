@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Alert, Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { useUserAuth } from "./context/UserAuthContext";
@@ -51,9 +51,6 @@ export default function Login() {
             </Button>
           </div>
         </Form>
-      </div>
-      <div className="p-4 box mt-3 text-center">
-        Don't have an account? <Link to="/signup">Sign up</Link>
       </div>
     </>
   );

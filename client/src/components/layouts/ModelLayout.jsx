@@ -21,8 +21,7 @@ function ModelLayout(props) {
         </div>
       </div>
 
-      <section id="allcards">
-        <div className="backgroundStyle"></div>
+      <section>
         <div className="cardsContainer">
           <div className="cards">
             <h3>Horse power</h3>

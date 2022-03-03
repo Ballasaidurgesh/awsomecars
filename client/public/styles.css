@@ -35,6 +35,34 @@ hr {
 
 /* #0A1931 #F76E11 */
 
+.admin {
+   text-align: center;
+   padding: 15%;
+}
+
+.admin button{
+  margin:20px;
+  background-color: #0a1931;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.admin button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.admin button:hover {
+  background-color: #f76e11;
+} 
+
+.admin a:hover {
+   background-color: #f76e11;
+}
+
+
 /********************************** navigation section ****************************************/
 
 header {
@@ -327,13 +355,13 @@ textarea {
 
 .cars {
   margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 #brand {
-
-  display: inline-flex;
   width: 500px;
-  justify-content: space-around;
 }
 
 .brand-models {
@@ -376,6 +404,10 @@ textarea {
 }
 
 /*************************************** models layout title section *****************************/
+
+#models {
+  overflow: hidden;
+}
 
 .title {
   position: relative;
@@ -496,10 +528,6 @@ textarea {
   position: relative;
 }
 
-.images div img {
-  display: block;
-}
-
 .images img {
   margin: 10px;
 }
@@ -578,10 +606,17 @@ textarea {
 
 #overview {
   width: 70%;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 10px 0;
 }
 
+/* sign up section */
+
+.signup {
+  padding: 20px;
+  margin: 80px auto auto auto;
+  width: 40%;
+}
 
 /* ********************************************************************************************* */
 
@@ -677,6 +712,14 @@ textarea {
 
 .dropdown-items a:hover {
   color: #fff;
+}
+
+#dimensions h1 {
+  width: 350px;
+}
+
+#dimensions table {
+  width: 90%;
 }
 
 }

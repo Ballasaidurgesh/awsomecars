@@ -84,10 +84,10 @@ function Footer() {
       <section>
         <p> &copy; DURGESH 2022 </p>
         <div>
-          <Link to="/addnews">
+          <Link to="/">
             <TwitterIcon />
           </Link>
-          <Link to="/addcar">
+          <Link to="/">
             <GitHubIcon />
           </Link>
           <Link to="/">

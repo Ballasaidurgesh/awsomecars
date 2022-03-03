@@ -7,19 +7,50 @@ import Model from "./Model";
 import Cars from "./Cars";
 import Home from "./Home";
 import Addnews from "./addData/Addnews";
+import Login from "./Login";
+import Signup from "./Signup";
+import { UserAuthContextProvider } from "./context/UserAuthContext";
+import Admin from "./Admin";
+import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
   return (
     <div>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="addcar" element={<Addcar />} />
-        <Route path="addnews" element={<Addnews />} />
-        <Route path="/model/:id" element={<Model />} />
-        <Route path="/cars/:brand" element={<Cars />} />
-      </Routes>
-      <Footer />
+      <UserAuthContextProvider>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/model/:id" element={<Model />} />
+          <Route path="/cars/:brand" element={<Cars />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+          <Route
+            path="admin"
+            element={
+              <ProtectedRoute>
+                <Admin />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="addcar"
+            element={
+              <ProtectedRoute>
+                <Addcar />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="addnews"
+            element={
+              <ProtectedRoute>
+                <Addnews />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+        <Footer />
+      </UserAuthContextProvider>
     </div>
   );
 }

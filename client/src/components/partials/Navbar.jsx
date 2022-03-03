@@ -7,24 +7,24 @@ import DragHandleIcon from "@mui/icons-material/DragHandle";
 function NavBar() {
   const [isActive, setActive] = useState(false);
 
-  const [isActive1, setActive1] = useState(false);
-  const [isActive2, setActive2] = useState(false);
-  const [isActive3, setActive3] = useState(false);
-
   function toggleMenu() {
     setActive(!isActive);
   }
 
-  function handleClick1() {
-    setActive1(!isActive1);
-  }
-  function handleClick2() {
-    setActive2(!isActive2);
-  }
+  // const [isActive1, setActive1] = useState(false);
+  // const [isActive2, setActive2] = useState(false);
+  // const [isActive3, setActive3] = useState(false);
 
-  function handleClick3() {
-    setActive3(!isActive3);
-  }
+  // function handleClick1() {
+  //   setActive1(!isActive1);
+  // }
+  // function handleClick2() {
+  //   setActive2(!isActive2);
+  // }
+
+  // function handleClick3() {
+  //   setActive3(!isActive3);
+  // }
 
   return (
     <header>
@@ -38,8 +38,8 @@ function NavBar() {
       </div>
       <div className={`navbar  ${isActive && "active-menu"}`}>
         <div className="dropdown">
-          <button onClick={handleClick1}>SUPERCARS</button>
-          <div className={`dropdown-items ${isActive1 && "dropdown-active"} `}>
+          <button>SUPERCARS</button>
+          <div className={`dropdown-items  `}>
             <Link to="/cars/Lamborghini">Lamborghini</Link>
             <Link to="/cars/Ferrari">Ferrari</Link>
             <Link to="/cars/Porsche">Porsche</Link>
@@ -52,16 +52,16 @@ function NavBar() {
           </div>
         </div>
         <div className="dropdown">
-          <button onClick={handleClick2}>HYPERCARS</button>
-          <div className={`dropdown-items ${isActive2 && "dropdown-active"} `}>
+          <button>HYPERCARS</button>
+          <div className={`dropdown-items  `}>
             <Link to="/cars/Bugatti">Bugatti</Link>
             <Link to="/cars/Pagani">Pagani</Link>
             <Link to="/cars/Koenigsegg">Koenigsegg</Link>
           </div>
         </div>
         <div className="dropdown">
-          <button onClick={handleClick3}>LUXURYCARS</button>
-          <div className={`dropdown-items ${isActive3 && "dropdown-active"} `}>
+          <button>LUXURYCARS</button>
+          <div className={`dropdown-items`}>
             <Link to="/cars/Rolls-Royce">Rolls Royce</Link>
             <Link to="/cars/Bentley">Bentley</Link>
           </div>

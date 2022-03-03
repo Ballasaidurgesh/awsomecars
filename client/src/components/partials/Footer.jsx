@@ -82,7 +82,10 @@ function Footer() {
         </div>
       </div>
       <section>
-        <p> &copy; DURGESH 2022 </p>
+        <p>
+          {" "}
+          &copy; <Link to="/admin">Durgesh</Link>{" "}
+        </p>
         <div>
           <Link to="/">
             <TwitterIcon />

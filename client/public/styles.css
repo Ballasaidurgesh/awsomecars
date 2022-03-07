@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=DM+Serif+Text&family=Kanit&family=Noto+Sans&family=Noto+Serif+Display:wght@600&family=Tangerine:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=DM+Serif+Text&family=Kanit&family=Noto+Sans&family=Noto+Serif+Display:wght@600&family=Tangerine:wght@700&display=swap");
 
 * {
   padding: 0;
@@ -13,8 +13,7 @@ p {
 
 a,
 button {
-  font-family: 'Kanit',
-  sans-serif;
+  font-family: "Kanit", sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
 }
@@ -36,12 +35,12 @@ hr {
 /* #0A1931 #F76E11 */
 
 .admin {
-   text-align: center;
-   padding: 15%;
+  text-align: center;
+  padding: 15%;
 }
 
-.admin button{
-  margin:20px;
+.admin button {
+  margin: 20px;
   background-color: #0a1931;
   padding: 10px 20px;
   color: #fff;
@@ -56,12 +55,11 @@ hr {
 
 .admin button:hover {
   background-color: #f76e11;
-} 
-
-.admin a:hover {
-   background-color: #f76e11;
 }
 
+.admin a:hover {
+  background-color: #f76e11;
+}
 
 /********************************** navigation section ****************************************/
 
@@ -75,7 +73,7 @@ header {
   background-color: #0a1931;
   z-index: 1000;
   height: 70px;
-   transition: .4s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .logo {
@@ -125,13 +123,13 @@ header a {
   height: 0;
   border-radius: 5px;
   padding: 5px;
- overflow: hidden;
- visibility: hidden;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .dropdown:hover div {
- height: auto;
- visibility: visible;
+  height: auto;
+  visibility: visible;
 }
 
 .dropdown-active {
@@ -155,15 +153,13 @@ header a {
   background-color: #f76e11;
 }
 
-
 .menu-icon {
-background-color: #fff;
-margin-right: 20px;
-margin-bottom: 10px;
-border-radius: 5px;
-visibility: hidden;
+  background-color: #fff;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  visibility: hidden;
 }
-
 
 /* alert  section */
 
@@ -312,7 +308,6 @@ textarea {
   background-color: rgb(27, 80, 228);
 }
 
-
 /******************************** home section **********************************/
 
 #home {
@@ -322,12 +317,11 @@ textarea {
   justify-content: space-around;
 }
 
-
 .heading {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: #f76e11;
 }
 
@@ -496,12 +490,10 @@ textarea {
   margin: 0 10px;
 }
 
-
 /* features section */
 
 #features {
   position: relative;
-  
 }
 
 #features h2 {
@@ -520,7 +512,6 @@ textarea {
   margin: 0 15px;
 }
 
-
 /* images section */
 
 .images {
@@ -538,18 +529,16 @@ textarea {
 
 .images img:nth-child(2) {
   width: 31%;
-   position: absolute;
-   right: 50px;
-   top: 0;
+  position: absolute;
+  right: 50px;
+  top: 0;
 }
 .images img:nth-child(3) {
   width: 31%;
-   position: absolute;
-   right: 50px;
-   top: 50%;
+  position: absolute;
+  right: 50px;
+  top: 50%;
 }
-
-
 
 /* details section */
 
@@ -618,9 +607,58 @@ textarea {
   width: 40%;
 }
 
+/* loader */
+
+.loader {
+  padding: 15%;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #f76e11 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 /* ********************************************************************************************* */
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .menu-icon {
     visibility: visible;
     cursor: pointer;
@@ -637,16 +675,19 @@ textarea {
     width: 0;
     opacity: 0;
     overflow: hidden;
-    transition: .4s;
+    transition: 0.4s;
   }
 
- h1, h2,h3, h4 {
-  font-size: 30px;
-}
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 30px;
+  }
 
   .active-menu {
-  width: 200px;
-  opacity: 1;
+    width: 200px;
+    opacity: 1;
   }
 
   .news-cards {
@@ -678,15 +719,13 @@ textarea {
 
   .featuresContainer {
     justify-content: flex-start;
-    
   }
 
   .items {
-   margin-left: 50px;
+    margin-left: 50px;
   }
 
   .images img:nth-child(2) {
- 
     position: absolute;
     right: 10px;
     top: 0;
@@ -699,27 +738,28 @@ textarea {
   }
 
   .dropdown-items {
-    
     position: relative;
     width: 100%;
     text-align: left;
-
   }
 
-.dropdown-items a {
-  color: #f76e11;
-}
+  .dropdown-items a {
+    color: #f76e11;
+  }
 
-.dropdown-items a:hover {
-  color: #fff;
-}
+  .dropdown-items a:hover {
+    color: #fff;
+  }
 
-#dimensions h1 {
-  width: 350px;
-}
+  #dimensions h1 {
+    width: 350px;
+  }
 
-#dimensions table {
-  width: 90%;
-}
+  #dimensions table {
+    width: 90%;
+  }
 
+  .signup {
+    width: 70%;
+  }
 }

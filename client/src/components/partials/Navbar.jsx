@@ -11,21 +11,6 @@ function NavBar() {
     setActive(!isActive);
   }
 
-  // const [isActive1, setActive1] = useState(false);
-  // const [isActive2, setActive2] = useState(false);
-  // const [isActive3, setActive3] = useState(false);
-
-  // function handleClick1() {
-  //   setActive1(!isActive1);
-  // }
-  // function handleClick2() {
-  //   setActive2(!isActive2);
-  // }
-
-  // function handleClick3() {
-  //   setActive3(!isActive3);
-  // }
-
   return (
     <header>
       <div className="logo">
@@ -65,6 +50,11 @@ function NavBar() {
             <Link to="/cars/Rolls-Royce">Rolls Royce</Link>
             <Link to="/cars/Bentley">Bentley</Link>
           </div>
+        </div>
+        <div>
+          <button>
+            <Link to="/admin">Login</Link>
+          </button>
         </div>
       </div>
       <Outlet />

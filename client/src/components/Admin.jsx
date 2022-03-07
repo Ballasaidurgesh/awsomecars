@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useUserAuth } from "./context/UserAuthContext";
+import Scrolltotop from "./partials/ScrolltoTop";
 
 export default function Admi() {
   const { logOut } = useUserAuth();
@@ -15,6 +16,7 @@ export default function Admi() {
 
   return (
     <div className="admin">
+      <Scrolltotop />
       <h1>Welcome Durgesh !</h1>
       <Button>
         <Link to="/addnews">Addnews</Link>

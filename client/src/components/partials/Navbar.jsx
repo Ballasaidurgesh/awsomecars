@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import DragHandleIcon from "@mui/icons-material/DragHandle";
 
 //nav links and routes
@@ -57,7 +57,6 @@ function NavBar() {
           </button>
         </div>
       </div>
-      <Outlet />
     </header>
   );
 }

@@ -13,7 +13,7 @@ function Cars() {
   //all cars data of specific brand
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/cars/${brand}`)
+      .get(`/cars/${brand}`)
       .then((response) => {
         setcars(response.data);
         setLoading(true);
@@ -21,7 +21,7 @@ function Cars() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  });
 
   return (
     <div className="cars">

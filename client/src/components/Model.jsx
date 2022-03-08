@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import ModelLayout from "./layouts/ModelLayout";
 import Loader from "./Loader";
+import ScrollToTopOnMount from "./partials/ScrolltoTop";
 
 //rendering individual pages
 
@@ -13,7 +14,7 @@ function Model() {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`/model/${id}`).then((response) => {
+    axios.get(`http://localhost:8000/model/${id}`).then((response) => {
       setitems(response.data);
       setLoading(true);
     });
@@ -21,6 +22,7 @@ function Model() {
 
   return (
     <div id="models">
+      <ScrollToTopOnMount />
       {isLoading ? (
         <ModelLayout
           brand={items.brand}

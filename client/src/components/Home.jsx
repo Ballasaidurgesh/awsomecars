@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NewsLayout from "./layouts/NewsLayout";
 import Loader from "./Loader";
+import ScrollToTopOnMount from "./partials/ScrolltoTop";
 
 function Home() {
   const [news, setNews] = useState([]);
@@ -9,7 +10,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("/news")
+      .get("http://localhost:8000/news")
       .then((response) => {
         setNews(response.data);
         setLoading(true);
@@ -21,6 +22,7 @@ function Home() {
 
   return (
     <div id="home">
+      <ScrollToTopOnMount />
       {isLoading ? (
         news.map((foundNews, index) => {
           return (

@@ -10,9 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 //mongodb connection
-mongoose.connect(
-  "mongodb+srv://Durgesh-admin:Durgesh22@cars0.v4wnj.mongodb.net/carsDB",
-);
+mongoose.connect(process.env.DATABASE);
 
 //schema
 

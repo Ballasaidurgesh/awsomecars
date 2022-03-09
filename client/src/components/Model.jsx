@@ -14,11 +14,11 @@ function Model() {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`/model/${id}`).then((response) => {
+    axios.get(`http://localhost:8000/model/${id}`).then((response) => {
       setitems(response.data);
       setLoading(true);
     });
-  });
+  }, []);
 
   return (
     <div id="models">

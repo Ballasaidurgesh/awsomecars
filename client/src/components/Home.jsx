@@ -10,7 +10,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("/news")
+      .get("http://localhost:8000/news")
       .then((response) => {
         setNews(response.data);
         setLoading(true);
@@ -18,7 +18,7 @@ function Home() {
       .catch((err) => {
         console.log(err);
       });
-  });
+  }, []);
 
   return (
     <div id="home">
